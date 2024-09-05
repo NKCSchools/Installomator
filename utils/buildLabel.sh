@@ -3,7 +3,7 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # downloadURL=${1?:"need to provide a download URL."}
-downloadURL="https://github.com/PowerShell/PowerShell/releases/download/v7.2.19/powershell-7.2.19-osx-arm64.pkg"
+downloadURL="https://www.primera.com/support/exe/Eddie/EdibleInkPrinter-2.4-N.dmg"
 
 # Note: this tool _very_ experimental and does not work in many cases
 # That being said, it's a great place to start for building up the label in the Case-statement
