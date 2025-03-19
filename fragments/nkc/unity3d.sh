@@ -4,5 +4,6 @@ unity3d)
     type="dmg"
     downloadURL="https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
     appNewVersion=""
-    expectedTeamID="BVPN9UFA9B"
+    # expectedTeamID="BVPN9UFA9B"
+    expectedTeamID="9QW8UQUTAA"
     ;;
