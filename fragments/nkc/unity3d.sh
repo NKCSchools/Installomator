@@ -5,5 +5,6 @@ unity3d)
     downloadURL="https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
     appNewVersion=""
     # expectedTeamID="BVPN9UFA9B"
+    sudo mkdir /Applications/Unity/Hub/Editor
     expectedTeamID="9QW8UQUTAA"
     ;;
