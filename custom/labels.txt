@@ -1,6 +1,7 @@
 docker
 swiftdialog
 brave
+zoom
 arduino
 cricutdesignspace
 easeldriver
