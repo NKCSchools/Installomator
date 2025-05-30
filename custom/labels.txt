@@ -1,5 +1,6 @@
 docker
 swiftdialog
+brave
 arduino
 cricutdesignspace
 easeldriver
