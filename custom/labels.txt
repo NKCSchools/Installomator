@@ -1,7 +1,11 @@
-docker
-swiftdialog
+1password8
 brave
-zoom
+chatgpt
+discord
+githubdesktop
+googlechromepkg
+hazel
+microsoftvisualstudiocode
 arduino
 cricutdesignspace
 easeldriver
@@ -11,7 +15,6 @@ javajdk
 kitestudentportal
 locklizard
 loggerpro
-microsoftpowershell
 minecraftedu
 pltwkitestudentportal
 python3
