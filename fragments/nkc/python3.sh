@@ -1,6 +1,5 @@
-
-# This is the official Installomator label with --compressed added. Also changed label name to python3
 python3)
+    # This is the official Installomator label with --compressed added. Also changed label name to python3
     # NKC Change
     name="Python"
     type="pkg"
