@@ -3,7 +3,7 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # downloadURL=${1?:"need to provide a download URL."}
-downloadURL="https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
+downloadURL="https://ccmdls.adobe.com/AdobeProducts/StandaloneBuilds/ACCC/ESD/6.6.0/611/macarm64/ACCCx6_6_0_611.dmg"
 
 # Note: this tool _very_ experimental and does not work in many cases
 # That being said, it's a great place to start for building up the label in the Case-statement

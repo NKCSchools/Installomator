@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2025-05-30"
+VERSIONDATE="2025-06-03"
 
 # MARK: Functions
 
@@ -1552,6 +1552,18 @@ valuesfromarguments)
     ;;
 
 # label descriptions start here
+adobecreativecloudnkc)
+    name="adobecreativecloud"
+    type="dmg"
+    if [[ "$(arch)" == "arm64" ]]; then
+        downloadURL=$(curl -fs "https://helpx.adobe.com/in/download-install/kb/creative-cloud-desktop-app-download.html" | grep -o 'https.*macarm64.*dmg' | head -1 | cut -d '"' -f1)
+    else
+        downloadURL=$(curl -fs "https://helpx.adobe.com/in/download-install/kb/creative-cloud-desktop-app-download.html" | grep -o 'https.*osx10.*dmg' | head -1 | cut -d '"' -f1)
+    fi
+    appNewVersion=""
+    expectedTeamID="JQ525L2MZD"
+    ;;
+	
 arduino)
     # NKC Change
     name="arduino"
@@ -1632,15 +1644,7 @@ loggerpro)
     appNewVersion=""
     expectedTeamID="75WN2B2WR8"
     ;;
-microsoftpowershell)
-    # NKC Change
-    name="Microsoft PowerShell"
-    type="pkg"
-    downloadURL=$(downloadURLFromGit PowerShell PowerShell )
-    appNewVersion=$(versionFromGit PowerShell PowerShell )
-    expectedTeamID="UBF8T346G9"
-    ;;
-    minecraftedu)
+minecraftedu)
     # NKC Change
     name="Minecraft Education Edition"
     type="dmg"
