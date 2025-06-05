@@ -1,6 +1,5 @@
 1password8
 brave
-chatgpt
 discord
 githubdesktop
 logitechoptionsplus
@@ -8,7 +7,7 @@ microsoftvisualstudiocode
 adobecreativecloudnkc
 arduino
 cricutdesignspace
-displaylinkmanager
+displaylinkmanagernkc
 easeldriver
 edibleinkprinter24n
 ibmnotifier
