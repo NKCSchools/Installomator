@@ -1,4 +1,5 @@
-displaylinkmanager)
+displaylinkmanagernkc)
+    # NKC Change
     name="DisplayLink Manager"
     type="pkgInZip"
     appNewVersion=$(curl -sfL https://www.synaptics.com/products/displaylink-graphics/downloads/macos | grep -m 1 "Release:" | cut -d ' ' -f2)
