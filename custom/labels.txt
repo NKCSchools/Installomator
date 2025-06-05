@@ -3,10 +3,12 @@ brave
 chatgpt
 discord
 githubdesktop
+logitechoptionsplus
 microsoftvisualstudiocode
 adobecreativecloudnkc
 arduino
 cricutdesignspace
+displaylinkmanager
 easeldriver
 edibleinkprinter24n
 ibmnotifier
