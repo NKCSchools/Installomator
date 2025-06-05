@@ -8,7 +8,7 @@ microsoftvisualstudiocode
 adobecreativecloudnkc
 arduino
 cricutdesignspace
-displaylinkmanagernkc
+displaylinkmanager
 easeldriver
 edibleinkprinter24n
 ibmnotifier
