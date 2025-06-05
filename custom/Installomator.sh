@@ -1594,7 +1594,8 @@ cricutdesignspace)
     downloadURL=$(getJSONValue $(curl  -fsL "https://apis.cricut.com/desktopdownload/InstallerFile?shard=a&operatingSystem=osxnative&fileName=CricutDesignSpace-Install-v${appNewVersion}.dmg") "result")
     expectedTeamID="25627ZFVT7"
     ;;
-displaylinkmanager)
+displaylinkmanagernkc)
+    # NKC Change
     name="DisplayLink Manager"
     type="pkgInZip"
     appNewVersion=$(curl -sfL https://www.synaptics.com/products/displaylink-graphics/downloads/macos | grep -m 1 "Release:" | cut -d ' ' -f2)
