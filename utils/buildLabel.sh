@@ -3,7 +3,7 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # downloadURL=${1?:"need to provide a download URL."}
-downloadURL="https://download.splunk.com/products/universalforwarder/releases/9.4.2/osx/splunkforwarder-9.4.2-e9664af3d956-darwin-universal2.tgz"
+downloadURL="https://github.com/neurobin/shc/releases/tag/4.0.3"
 
 # Note: this tool _very_ experimental and does not work in many cases
 # That being said, it's a great place to start for building up the label in the Case-statement
