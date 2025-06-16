@@ -15,7 +15,7 @@ javajdk
 kitestudentportal
 locklizard
 loggerpro
-minecraftedu
+nodejs
 pltwkitestudentportal
 python3
 questarstudent
