@@ -22,7 +22,6 @@ questarstudent
 razersynapseinstaller
 respondusldb
 simpleinout
-splunkforwarder
 testnav
 unity3d
 verniergraphicalanalysis
