@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2025-06-05"
+VERSIONDATE="2025-06-16"
 
 # MARK: Functions
 
@@ -1741,7 +1741,14 @@ simpleinout)
     appNewVersion=""
     expectedTeamID="R536BS52FG"
     ;;
-testnav)
+splunkforwarder)
+    name="SplunkForwarder"
+    type="pkgInDmg"
+    downloadURL="https://download.splunk.com/products/universalforwarder/releases/9.4.2/macOS/SplunkUniversalForwarder-9.4.2-a7f645ddaf91-darwin-universal.dmg"
+    appNewVersion="9.4.2"
+    pkgName=".payload/SplunkForwarder_9.4.2.pkg"
+    expectedTeamID="4HBT8Q2X5G"
+    ;;testnav)
     name="installer"
     type="dmg"
     dmgname=$(curl -s https://download.testnav.com/installerVersions.json | grep mac | cut -d ":" -f 2 | cut -d '"' -f 2)
