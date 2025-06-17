@@ -3,6 +3,7 @@ brave
 discord
 githubdesktop
 logitechoptionsplus
+logioptionsplusinstalleroffline
 microsoftvisualstudiocode
 adobecreativecloudnkc
 arduino
