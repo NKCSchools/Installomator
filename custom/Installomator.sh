@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2025-06-16"
+VERSIONDATE="2025-06-18"
 
 # MARK: Functions
 
@@ -1663,6 +1663,14 @@ loggerpro)
     appNewVersion=""
     expectedTeamID="75WN2B2WR8"
     ;;
+logioptionsplusinstalleroffline)
+	# NKC Change
+    name="logioptionsplus_installer_offline"
+    type="zip"
+    downloadURL="https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_offline.zip"
+    appNewVersion=""
+    expectedTeamID="QED4VVPZWA"
+    ;;
 minecraftedu)
     # NKC Change
     name="Minecraft Education Edition"
@@ -1741,25 +1749,7 @@ simpleinout)
     appNewVersion=""
     expectedTeamID="R536BS52FG"
     ;;
-splunkforwarder)
-    name="SplunkForwarder"
-    type="dmg"
-    downloadURL="https://download.splunk.com/products/universalforwarder/releases/9.4.2/macOS/SplunkUniversalForwarder-9.4.2-a7f645ddaf91-darwin-universal.dmg"
-    appNewVersion="9.4.2"
-    expectedTeamID="4HBT8Q2X5G"
-    installerTool="custom"
-    installCommand='
-        pkgPath=$(find "$tmpDir" -type f -path "*/.payload/*.pkg" -name "*.pkg" | head -n 1)
-        if [ -f "$pkgPath" ]; then
-            echo "Installing SplunkForwarder from $pkgPath"
-            /usr/sbin/installer -pkg "$pkgPath" -target /
-        else
-            echo "ERROR: Could not find SplunkForwarder pkg inside mounted dmg"
-            exit 1
-        fi
-    '
-    ;;
-    testnav)
+testnav)
     name="installer"
     type="dmg"
     dmgname=$(curl -s https://download.testnav.com/installerVersions.json | grep mac | cut -d ":" -f 2 | cut -d '"' -f 2)
