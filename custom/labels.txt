@@ -1,4 +1,5 @@
 1password8
+adobereaderdc
 brave
 discord
 githubdesktop
