@@ -3,7 +3,7 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # downloadURL=${1?:"need to provide a download URL."}
-downloadURL="https://github.com/neurobin/shc/releases/tag/4.0.3"
+downloadURL="https://s3.us-east-2.amazonaws.com/com.motalab.showforge/Showforge.dmg"
 
 # Note: this tool _very_ experimental and does not work in many cases
 # That being said, it's a great place to start for building up the label in the Case-statement
