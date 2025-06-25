@@ -1,10 +1,8 @@
 1password8
-adobereaderdc
 brave
 discord
 githubdesktop
 logitechoptionsplus
-logioptionsplusinstalleroffline
 microsoftvisualstudiocode
 adobecreativecloudnkc
 arduino
@@ -17,14 +15,15 @@ javajdk
 kitestudentportal
 locklizard
 loggerpro
-nodejsThe Boys _util
+logioptionsplusinstalleroffline
+minecraftedu
 pltwkitestudentportal
 python3
 questarstudent
 razersynapseinstaller
 respondusldb
+#!/bin/bash
 simpleinout
 testnav
 unity3d
 verniergraphicalanalysis
-wireshark
