@@ -5,6 +5,7 @@ githubdesktop
 logitechoptionsplus
 microsoftvisualstudiocode
 adobecreativecloudnkc
+adobecreativecloudnkc
 arduino
 cricutdesignspace
 displaylinkmanagernkc
