@@ -4,6 +4,7 @@ discord
 githubdesktop
 logitechoptionsplus
 microsoftvisualstudiocode
+golang
 adobecreativecloudnkc
 arduino
 cricutdesignspace
