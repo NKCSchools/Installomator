@@ -1,6 +1,5 @@
 1password8
 brave
-chmodbpf
 discord
 githubdesktop
 golang
