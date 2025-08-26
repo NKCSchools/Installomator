@@ -1,14 +1,15 @@
 1password8
 brave
+chmodbpf
 discord
 githubdesktop
+golang
 logitechoptionsplus
 microsoftvisualstudiocode
-golang
 wireshark
-chmodbpf
 adobecreativecloudnkc
 arduino
+chmodbpf
 cricutdesignspace
 displaylinkmanagernkc
 easeldriver
@@ -29,4 +30,3 @@ simpleinout
 testnav
 unity3d
 verniergraphicalanalysis
-wireshark
