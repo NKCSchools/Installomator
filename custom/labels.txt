@@ -9,7 +9,6 @@ wireshark
 chmodbpf
 adobecreativecloudnkc
 arduino
-chmodbpf
 cricutdesignspace
 displaylinkmanagernkc
 easeldriver
