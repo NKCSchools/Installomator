@@ -1586,7 +1586,7 @@ adobecreativecloudnkc)
     ;;
 chmodbpf)
     name="ChmodPBF"
-    type="pkgindmg"
+    type="pkgInDmg"
     if [[ $(arch) == i386 ]]; then
       sparkleFeedURL="https://www.wireshark.org/update/0/Wireshark/4.0.0/macOS/x86-64/en-US/stable.xml"
     elif [[ $(arch) == arm64 ]]; then
