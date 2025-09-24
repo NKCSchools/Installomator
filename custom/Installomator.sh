@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2025-08-26"
+VERSIONDATE="2025-09-24"
 
 # MARK: Functions
 
@@ -1763,6 +1763,15 @@ simpleinout)
     appNewVersion=""
     expectedTeamID="R536BS52FG"
     ;;
+steinbergdownloadassistantsetup)
+    # NKC Change
+    name="Steinberg Download Assistant Setup"
+    type="dmg"
+    downloadURL="https://www.steinberg.net/sda-mac"
+    appNewVersion=""
+    expectedTeamID="5PMY476BJ6"
+    ;;
+
 testnav)
     name="installer"
     type="dmg"
