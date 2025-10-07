@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2025-09-24"
+VERSIONDATE="2025-10-07"
 
 # MARK: Functions
 
@@ -1800,6 +1800,16 @@ verniergraphicalanalysis)
     appNewVersion=""
     expectedTeamID="75WN2B2WR8"
     appName="Vernier Graphical Analysis.app"
+    ;;
+wifiexplorerpro3)
+    # NKC Change
+    name="WiFiExplorerPro3"
+    type="pkg"
+    packageID="com.intuitibits.wifiexplorerpro3.pkg
+com.intuitibits.wifiexplorerpro-helper.pkg"
+    downloadURL="https://www.intuitibits.com/download/wifiexplorerpro3"
+    appNewVersion=""
+    expectedTeamID="2B9R362QNU"
     ;;
 1password7)
     name="1Password 7"
