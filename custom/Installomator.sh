@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2025-10-10"
+VERSIONDATE="2025-10-16"
 
 # MARK: Functions
 
@@ -1655,6 +1655,16 @@ ibmnotifier)
 	expectedTeamID="PETKK2G752"
 	targetDir="/usr/local/nkc"
 	;;
+jamfconnectold)
+    # NKC Change
+    name="Jamf Connect"
+    type="pkgInDmg"
+    packageID="com.jamf.connect"
+    # downloadURL="https://files.jamfconnect.com/JamfConnect.dmg"
+    downloadURL="https://files.jamfconnect.com/JamfConnect-2.43.0.dmg"
+    appNewVersion=$(curl -fsIL "${downloadURL}" | grep "x-amz-meta-version" | grep -o "[0-9.].*[0-9.].*[0-9]")
+    expectedTeamID="483DWKW443"
+    ;;
 javajdk)
 	# NKC Change
     name="Java SE Development Kit 21"
