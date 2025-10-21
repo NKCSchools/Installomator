@@ -1,7 +1,7 @@
 #!/bin/zsh --no-rcs
 label="" # if no label is sent to the script, this will be used
 
-# Installomator Git
+# Installomator
 #
 # Downloads and installs Applications
 # 2020-2024 Installomator
@@ -348,7 +348,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
         rosetta2=no
     fi
 fi
-VERSION="10.8"
+VERSION="10.9beta"
 VERSIONDATE="2025-10-21"
 
 # MARK: Functions
