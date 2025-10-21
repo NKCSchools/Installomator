@@ -1,7 +1,7 @@
 #!/bin/zsh --no-rcs
 label="" # if no label is sent to the script, this will be used
 
-# Installomator
+# Installomator Git
 #
 # Downloads and installs Applications
 # 2020-2024 Installomator
