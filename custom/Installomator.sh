@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2025-10-16"
+VERSIONDATE="2025-10-21"
 
 # MARK: Functions
 
@@ -1618,7 +1618,31 @@ cricutdesignspace)
     downloadURL=$(getJSONValue $(curl  -fsL "https://apis.cricut.com/desktopdownload/InstallerFile?shard=a&operatingSystem=osxnative&fileName=CricutDesignSpace-Install-v${appNewVersion}.dmg") "result")
     expectedTeamID="25627ZFVT7"
     ;;
-displaylinkmanagernkc)
+cubexsoftpstwizardformac)
+    name="cubexsoft-pst-wizard-for-mac"
+    type="pkgInDmg"
+    packageID="com.cubexsoft.pkg.pstwizardformac"
+    downloadURL="https://www.cubexsoft.com/free-demo/cubexsoft-pst-wizard-for-mac.dmg"
+    appNewVersion=""
+    expectedTeamID="T89ND5XN28"
+    ;;#!/bin/bash
+    
+    sudo pkill DRC INSIGHT Online Assessments
+    tempfile="/usr/local/nkc/DRCConfiguration.json"
+    appfile="/Applications/DRC INSIGHT Online Assessments/DRCConfiguration.json"
+    touch $tempfile
+    
+    echo '{
+    "config": {
+        "httpsProxy": ""
+    },
+    "ouIds": [
+        "43044353"
+    ],
+    "toolkitUrl": "https://www.drcedirect.com/all/eca-device-toolkit-loader-ui/"
+}' > $tempfile
+    
+    cp "$tempfile" "$appfile"displaylinkmanagernkc)
     # NKC Change
     name="DisplayLink Manager"
     type="pkgInZip"
