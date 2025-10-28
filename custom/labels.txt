@@ -1,6 +1,6 @@
 1password8
 brave
-chmodbpf
+replicator
 discord
 githubdesktop
 golang
