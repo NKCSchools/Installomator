@@ -1771,6 +1771,13 @@ com.razer.Synapse.engine.install"
     appNewVersion=""
     expectedTeamID="R2H967U7J8"
     ;;
+    Replicator)
+    name="Replicator"
+    type="zip"
+    downloadURL="https://github.com/jamf/Replicator/releases/latest/download/Replicator.zip"
+    appNewVersion=""
+    expectedTeamID="PS2F6S478M"
+    ;;
     respondusldb)
     # NKC Change
     name="Respondus Lockdown Browser"
