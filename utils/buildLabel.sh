@@ -3,7 +3,8 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # downloadURL=${1?:"need to provide a download URL."}
-downloadURL="https://www.cubexsoft.com/free-demo/cubexsoft-pst-wizard-for-mac.dmg"
+# sample url for github downloadURL="https://github.com/jamf/Replicator/releases/latest/download/Replicator.zip
+downloadURL="https://github.com/jamf/Replicator/releases/latest/download/Replicator.zip"
 
 # Note: this tool _very_ experimental and does not work in many cases
 # That being said, it's a great place to start for building up the label in the Case-statement
@@ -264,8 +265,11 @@ echo "archivePath: $archivePath"
 
 # The two fields retuurned can be exchanged, so some servers return the filename on the other variable. Don't know why.
 # So we want to investigate which one has the filename
-try1archiveName=${${archiveTempName##*/}%%\?*}
-try2archiveName=${${archivePath##*/}%%\?*}
+try1archiveName="${archiveTempName##*/}"
+try1archiveName="${try1archiveName%%\?*}"
+
+try2archiveName="${archivePath##*/}"
+try2archiveName="${try2archiveName%%\?*}"
 fileName_re='^([a-zA-Z0-9\_.%-]*)\.(dmg|pkg|zip|tbz|gz|bz2)$' # regular expression for matching
 if [[ "${try1archiveName}" =~ $fileName_re ]]; then
     archiveName=${try1archiveName}
