@@ -1,8 +1,7 @@
 replicator)
     name="Replicator"
     type="zip"
-    downloadURL="https://github.com/jamf/Replicator/releases/latest/download/Replicator.zip"
+    downloadURL=$(downloadURLFromGit jamf Replicator)
     appNewVersion=""
     expectedTeamID="PS2F6S478M"
     ;;
-    
