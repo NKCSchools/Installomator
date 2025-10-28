@@ -1771,7 +1771,7 @@ com.razer.Synapse.engine.install"
     appNewVersion=""
     expectedTeamID="R2H967U7J8"
     ;;
-    Replicator)
+    replicator)
     name="Replicator"
     type="zip"
     downloadURL="https://github.com/jamf/Replicator/releases/latest/download/Replicator.zip"
