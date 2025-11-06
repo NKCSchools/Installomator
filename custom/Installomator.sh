@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2025-10-28"
+VERSIONDATE="2025-11-06"
 
 # MARK: Functions
 
@@ -1808,7 +1808,14 @@ steinbergdownloadassistantsetup)
     appNewVersion=""
     expectedTeamID="5PMY476BJ6"
     ;;
-
+    steinberglibrarymanagermac)
+name="Steinberg_Library_Manager_mac"
+type="pkgInDmg"
+packageID="com.steinberg.SteinbergLibraryManager"
+downloadURL="https://steinberg.net/slm-mac"
+appNewVersion=""
+expectedTeamID="5PMY476BJ6"
+;;
 unity3d)
     # NKC Change
     name="Unity Hub"

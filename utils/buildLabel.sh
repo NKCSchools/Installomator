@@ -5,7 +5,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 # downloadURL=${1?:"need to provide a download URL."}
 # sample url for github downloadURL="https://github.com/jamf/Replicator/releases/latest/download/Replicator.zip
 # Jamf team ID PS2F6S478M
-downloadURL="https://github.com/jamf/Replicator/releases/latest/download/Replicator.zip"
+downloadURL="https://steinberg.net/slm-mac"
 
 # Note: this tool _very_ experimental and does not work in many cases
 # That being said, it's a great place to start for building up the label in the Case-statement

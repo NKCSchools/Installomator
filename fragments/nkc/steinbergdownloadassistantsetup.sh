@@ -6,4 +6,4 @@ steinbergdownloadassistantsetup)
     appNewVersion=""
     expectedTeamID="5PMY476BJ6"
     ;;
-
+    
