@@ -7,7 +7,6 @@ golang
 logitechoptionsplus
 microsoftvisualstudiocode
 wireshark
-ztestfakelabel
 testnav
 adobecreativecloudnkc
 arduino
