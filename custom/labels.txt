@@ -7,7 +7,6 @@ golang
 logitechoptionsplus
 microsoftvisualstudiocode
 wireshark
-testnav
 adobecreativecloudnkc
 arduino
 chmodbpf
@@ -34,6 +33,7 @@ respondusldb
 simpleinout
 steinbergdownloadassistantsetup
 steinberglibrarymanagermac
+testnav
 unity3d
 verniergraphicalanalysis
 wifiexplorerpro3
