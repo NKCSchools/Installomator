@@ -1,6 +1,6 @@
 1password8
 brave
-replicator
+chmodbpf
 discord
 githubdesktop
 golang
@@ -14,6 +14,7 @@ chmodbpf
 cricutdesignspace
 cubexsoftpstwizardformac
 displaylinkmanagernkc
+dorico6
 easeldriver
 edibleinkprinter24n
 ibmnotifier
@@ -28,9 +29,11 @@ pltwkitestudentportal
 python3
 questarstudent
 razersynapseinstaller
+replicator
 respondusldb
 simpleinout
 steinbergdownloadassistantsetup
+steinberglibrarymanagermac
 unity3d
 verniergraphicalanalysis
 wifiexplorerpro3
