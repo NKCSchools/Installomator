@@ -4,7 +4,7 @@ easeldriver)
     packageID="com.inventables.iris-node
 com.inventables.iris-lib
 com.inventables.iris-daemon"
-    downloadURL="https://s3.amazonaws.com/easel-prod/paperclip/sender_version_mac_installers/58/original/EaselDriver.pkg?1737577368"
+    downloadURL="https://s3.amazonaws.com/easel-prod/paperclip/sender_version_mac_installers/59/original/EaselDriver.pkg?1767717066"
     appNewVersion=""
     expectedTeamID="3697SB42N2"
     ;;
