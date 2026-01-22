@@ -1552,6 +1552,314 @@ valuesfromarguments)
     ;;
 
 # label descriptions start here
+testnav)
+    name="installer"
+    type="dmg"
+    dmgname=$(curl -s https://download.testnav.com/installerVersions.json | grep mac | cut -d ":" -f 2 | cut -d '"' -f 2)
+    echo $dmgname
+    downloadURL="https://download.testnav.com/_testnavinstallers/$dmgname"
+    appNewVersion=""
+    appName="TestNav.app"
+    expectedTeamID="9EGT93JZWD"
+    ;;
+adobecreativecloudnkc)
+    name="Adobe Creative Cloud"
+    appName="Creative Cloud.app"
+    type="dmg"
+    if pgrep -q "Adobe Installer"; then
+        printlog "Adobe Installer is running, not a good time to update." WARN
+        printlog "################## End $APPLICATION \n\n" INFO
+        exit 75
+    fi
+    if [[ "$(arch)" == "arm64" ]]; then
+        downloadURL=$(curl -fs "https://helpx.adobe.com/in/download-install/kb/creative-cloud-desktop-app-download.html" | grep -o 'https.*macarm64.*dmg' | head -1 | cut -d '"' -f1)
+    else
+        downloadURL=$(curl -fs "https://helpx.adobe.com/in/download-install/kb/creative-cloud-desktop-app-download.html" | grep -o 'https.*osx10.*dmg' | head -1 | cut -d '"' -f1)
+    fi
+    #appNewVersion=$(curl -fs "https://helpx.adobe.com/creative-cloud/release-note/cc-release-notes.html" | grep "mandatory" | head -1 | grep -o "Version *.* released" | cut -d " " -f2)
+    appNewVersion=$(echo $downloadURL | grep -o '[^x]*$' | cut -d '.' -f 1 | sed 's/_/\./g')
+    targetDir="/Applications/Utilities/Adobe Creative Cloud/ACC/"
+    installerTool="Install.app"
+    CLIInstaller="Install.app/Contents/MacOS/Install"
+    CLIArguments=(--mode=silent)
+    expectedTeamID="JQ525L2MZD"
+    blockingProcesses=( "Creative Cloud" )
+    Company="Adobe"
+    ;;arduino)
+    # NKC Change
+    name="arduino"
+    type="dmg"
+    appNewVersion=$(curl -s -L https://www.arduino.cc/en/software | egrep -o 'https?://[^ ]+' | grep "arm64" | cut -f 2 -d '_')
+    downloadURL=$(curl -s -L https://www.arduino.cc/en/software | egrep -o 'https?://[^ ]+' | grep "arm64" | cut -f 1 -d '"')
+    expectedTeamID="7KT7ZWMCJT"
+    appName="Arduino IDE.app"
+    ;;
+autoreload)
+    name="Auto Reload"
+    type="zip"
+    downloadURL="$(downloadURLFromGit garrettrayj auto-reload)"
+    appNewVersion="$(versionFromGit garrettrayj auto-reload)"
+    expectedTeamID="N7TC759VWV"
+    ;;
+chmodbpf)
+    name="ChmodPBF"
+    type="pkgInDmg"
+    if [[ $(arch) == i386 ]]; then
+      sparkleFeedURL="https://www.wireshark.org/update/0/Wireshark/4.0.0/macOS/x86-64/en-US/stable.xml"
+    elif [[ $(arch) == arm64 ]]; then
+      sparkleFeedURL="https://www.wireshark.org/update/0/Wireshark/4.0.0/macOS/arm64/en-US/stable.xml"
+    fi
+    sparkleFeed=$(curl -fs "$sparkleFeedURL")
+    appNewVersion=$(echo "$sparkleFeed" | xpath '(//rss/channel/item/enclosure/@sparkle:version)[1]' 2>/dev/null | cut -d '"' -f 2)
+    downloadURL=$(echo "$sparkleFeed" | xpath '(//rss/channel/item/enclosure/@url)[1]' 2>/dev/null | cut -d '"' -f 2)
+    expectedTeamID="7Z6EMTD2C6"
+    pkgName="Install ChmodBPF.pkg"
+    ;;
+cricutdesignspace)
+    # NKC Change
+    name="Cricut Design Space"
+    type="dmg"
+    cricutVersionURL=$(getJSONValue $(curl -fsL "https://apis.cricut.com/desktopdownload/UpdateJson?operatingSystem=osxnative&shard=a") "result")
+    cricutVersionJSON=$(curl -fs "$cricutVersionURL")
+    appNewVersion=$(getJSONValue "$cricutVersionJSON" "rolloutVersion")
+    downloadURL=$(getJSONValue $(curl  -fsL "https://apis.cricut.com/desktopdownload/InstallerFile?shard=a&operatingSystem=osxnative&fileName=CricutDesignSpace-Install-v${appNewVersion}.dmg") "result")
+    expectedTeamID="25627ZFVT7"
+    ;;
+cubexsoftpstwizardformac)
+    name="cubexsoft-pst-wizard-for-mac"
+    type="pkgInDmg"
+    packageID="com.cubexsoft.pkg.pstwizardformac"
+    downloadURL="https://www.cubexsoft.com/free-demo/cubexsoft-pst-wizard-for-mac.dmg"
+    appNewVersion=""
+    expectedTeamID="T89ND5XN28"
+    ;;
+    displaylinkmanagernkc)
+    # NKC Change
+    name="DisplayLink Manager"
+    type="pkgInZip"
+    appNewVersion=$(curl -sfL https://www.synaptics.com/products/displaylink-graphics/downloads/macos | grep -m 1 "Release:" | cut -d ' ' -f2)
+    downloadURL="https://www.synaptics.com$(version_no_dots="${appNewVersion//./}" && intermediate_page_url="https://www.synaptics.com/products/displaylink-manager-graphics-connectivity-${version_no_dots}?filetype=exe" && curl -sfL "${intermediate_page_url}" | grep -o -E 'href="[^"]*DisplayLink%20Manager%20Graphics%20Connectivity[^"]*EXE\.zip[^"]*"' | head -n 1 | sed 's/href="//' | sed 's/"//')"
+    expectedTeamID="73YQY62QM3"
+    ;;
+    dorico6)
+    name="Dorico_6.1.10_Installer_mac"
+    type="pkgInDmg"
+    packageID="com.steinberg.dorico6"
+    downloadURL="https://download.steinberg.net/support/temporary/Dorico_6.1.10/Dorico_6.1.10_Installer_mac.dmg"
+    appNewVersion=""
+    expectedTeamID="5PMY476BJ6"
+    ;;
+easeldriver)
+    name="EaselDriver"
+    type="pkg"
+    packageID="com.inventables.iris-node
+com.inventables.iris-lib
+com.inventables.iris-daemon"
+    downloadURL="https://s3.amazonaws.com/easel-prod/paperclip/sender_version_mac_installers/59/original/EaselDriver.pkg?1767717066"
+    appNewVersion=""
+    expectedTeamID="3697SB42N2"
+    ;;
+edibleinkprinter24n)
+    # NKC Change
+    # Link comes from: https://www.primera.com/eddiedownloads. Need to turn it into a true Installomator link to pull the latest version
+    name="EdibleInkPrinter-2.4-N"
+    type="pkgInDmg"
+    packageID="com.primera.Eddie"
+    downloadURL="https://www.primera.com/support/exe/Eddie/Eddie_2.8_CookiePro_1.0.dmg"
+    appNewVersion=""
+    expectedTeamID="56Y8447L2Y"
+    ;;
+ibmnotifier)
+	# NKC Change
+	name="IBM Notifier"
+	type="zip"
+	downloadURL=$(downloadURLFromGit ibm mac-ibm-notifications )
+	appNewVersion=$(versionFromGit ibm mac-ibm-notifications )
+	expectedTeamID="PETKK2G752"
+	targetDir="/usr/local/nkc"
+	;;
+jamfconnectold)
+    # NKC Change
+    name="Jamf Connect"
+    type="pkgInDmg"
+    packageID="com.jamf.connect"
+    # downloadURL="https://files.jamfconnect.com/JamfConnect.dmg"
+    downloadURL="https://files.jamfconnect.com/JamfConnect-2.43.0.dmg"
+    appNewVersion=$(curl -fsIL "${downloadURL}" | grep "x-amz-meta-version" | grep -o "[0-9.].*[0-9.].*[0-9]")
+    expectedTeamID="483DWKW443"
+    ;;
+javajdk)
+	# NKC Change
+    name="Java SE Development Kit 21"
+    type="pkgInDmg"
+    versionKey="CFBundleShortVersionString"
+    downloadURL="https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg"
+    expectedTeamID="VB5E2TV963"
+    ;;
+    kitestudentportal)
+    # NKC Change
+    # Download link found at https://ksassessments.org/node/147
+    name="Kite Student Portal"
+    type="pkg"
+    downloadURL="https://files.kiteaai.org/installers/studentportal/prod/latest/mac/Kite%20Student%20Portal.pkg"
+    appNewVersion=""
+    expectedTeamID="BK4732M7XX"
+    ;;
+locklizard)
+	# NKC Change
+    name="locklizard"
+    type="pkgInZip"
+    packageID="com.locklizard.pkg.LockLizardSafeguardViewer"
+    downloadURL="https://downloads.locklizard.com/PDCViewerSetupOSX.zip?v2583"
+    appNewVersion=""
+    expectedTeamID="KSB4G4V9FZ"
+	;;
+loggerpro)
+    # NKC Change
+    name="Logger Pro"
+    type="pkgInDmg"
+    downloadURL="https://www.vernier.com/d/pocyc"
+    appNewVersion=""
+    expectedTeamID="75WN2B2WR8"
+    ;;
+logioptionsplusinstalleroffline)
+	# NKC Change
+    name="logioptionsplus_installer_offline"
+    type="zip"
+    downloadURL="https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_offline.zip"
+    appNewVersion=""
+    expectedTeamID="QED4VVPZWA"
+    ;;
+minecraftedu)
+    # NKC Change
+    name="Minecraft Education Edition"
+    type="dmg"
+    downloadURL="https://aka.ms/meeclientmacos"
+    appNewVersion=""
+    expectedTeamID="UBF8T346G9"
+    appName="minecraft-edu.app"
+    ;;
+pltwkitestudentportal)
+    # NKC Change
+    name="PLTW Kite Student Portal"
+    type="dmg"
+    downloadURL="https://files.kiteaai.org/installers/pltwstudentportal/prod/latest/mac/PLTW%20Kite%20Student%20Portal.dmg"
+    appNewVersion=""
+    expectedTeamID="BK4732M7XX"
+    ;;
+python3)
+    # This is the official Installomator label with --compressed added. Also changed label name to python3
+    # NKC Change
+    name="Python"
+    type="pkg"
+    appNewVersion="$( curl -s --compressed "https://www.python.org/downloads/macos/" | awk '/Latest Python 3 Release - Python/{gsub(/<\/?[^>]+(>|$)/, ""); print $NF}' )"
+    archiveName="$( curl -s --compressed "https://www.python.org/ftp/python/$appNewVersion/" | grep -om 1 "\"python.*macos.*\.pkg\"" | tr -d \" )"
+    downloadURL="https://www.python.org/ftp/python/$appNewVersion/$archiveName"
+    shortVersion=$( cut -d '.' -f1,2 <<< $appNewVersion )
+    packageID="org.python.Python.PythonFramework-$shortVersion"
+    expectedTeamID="BMM5U3QVKW"
+    blockingProcesses=( "IDLE" "Python Launcher" )
+    versionKey="CFBundleVersion"
+    appCustomVersion() {
+        if [ -d "/Library/Frameworks/Python.framework/Versions/$shortVersion/Resources/Python.app/" ]; then
+            /usr/bin/defaults read "/Library/Frameworks/Python.framework/Versions/$shortVersion/Resources/Python.app/Contents/Info" CFBundleVersion
+        fi
+    }
+    ;;
+questarstudent)
+    name="QuestarStudent-MO"
+    type="pkg"
+    packageID="com.questar.securebrowser"
+    downloadURL="https://mo.nextera.questarai.com/services/admin/api/v1/downloads/operating-systems/mac/secure-browser"
+    appCustomVersion="5.0.0"
+    appNewVersion=""
+    expectedTeamID="PXK5H529EX"
+    ;;
+razersynapseinstaller)
+    name="RazerSynapseInstaller"
+    type="pkg"
+    packageID="com.razer.install.AppInstall
+com.razer.Synapse.entry.install
+com.razer.install.EngineInstall
+com.razer.Synapse.engine.install"
+    downloadURL="https://rzr.to/synapse-4-mac-download"
+    appNewVersion=""
+    expectedTeamID="R2H967U7J8"
+    ;;
+    replicator)
+    name="Replicator"
+    type="zip"
+    downloadURL=$(downloadURLFromGit jamf Replicator)
+    appNewVersion=""
+    expectedTeamID="PS2F6S478M"
+    ;;
+respondusldb)
+    # NKC Change
+    name="Respondus Lockdown Browser"
+    type="pkgInZip"
+    appNewVersion=$(curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" "https://download.respondus.com/lockdown/download7.php?id=971144602" | grep 'Version:' | awk '{print $2}' | cut -d '<' -f1)
+    downloadURL=$(curl -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" "https://download.respondus.com/lockdown/download7.php?id=971144602" | grep -Eo "https?://\S+?\"" | grep downloads.respondus.com | head -1 | sed 's/.$//')
+    expectedTeamID="8CA6NAN723"
+    appName="LockDown Browser.app"
+    appCustomVersion(){
+        ldbmajor=$(defaults read "/Applications/LockDown Browser.app/Contents/Info.plist" CFBundleShortVersionString)
+        ldbminor=$(defaults read "/Applications/LockDown Browser.app/Contents/Info.plist" LDBMinorBuild)
+        echo "$ldbmajor.$ldbminor"
+        }
+    ;;
+simpleinout)
+    # NKC Change
+    name="Simple In Out"
+    type="zip"
+    downloadURL="https://downloads.simpleinout.com/desktop/Simple-In-Out-arm64.zip"
+    appNewVersion=""
+    expectedTeamID="R536BS52FG"
+    ;;
+steinbergdownloadassistantsetup)
+    # NKC Change
+    name="Steinberg Download Assistant Setup"
+    type="dmg"
+    downloadURL="https://www.steinberg.net/sda-mac"
+    appNewVersion=""
+    expectedTeamID="5PMY476BJ6"
+    ;;
+    steinberglibrarymanagermac)
+name="Steinberg_Library_Manager_mac"
+type="pkgInDmg"
+packageID="com.steinberg.SteinbergLibraryManager"
+downloadURL="https://steinberg.net/slm-mac"
+appNewVersion=""
+expectedTeamID="5PMY476BJ6"
+;;
+unity3d)
+    # NKC Change
+    name="Unity Hub"
+    type="dmg"
+    downloadURL="https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.dmg"
+    appNewVersion=""
+    # expectedTeamID="BVPN9UFA9B"
+    sudo mkdir /Applications/Unity/Hub/Editor
+    expectedTeamID="9QW8UQUTAA"
+    ;;
+verniergraphicalanalysis)
+    # NKC Change
+    name="Vernier"
+    type="dmg"
+    downloadURL="https://software-releases.graphicalanalysis.com/ga/mac/release/latest/Vernier-Graphical-Analysis.dmg"
+    appNewVersion=""
+    expectedTeamID="75WN2B2WR8"
+    appName="Vernier Graphical Analysis.app"
+    ;;
+wifiexplorerpro3)
+    # NKC Change
+    name="WiFiExplorerPro3"
+    type="pkg"
+    packageID="com.intuitibits.wifiexplorerpro3.pkg
+com.intuitibits.wifiexplorerpro-helper.pkg"
+    downloadURL="https://www.intuitibits.com/download/wifiexplorerpro3"
+    appNewVersion=""
+    expectedTeamID="2B9R362QNU"
+    ;;
 1password7)
     name="1Password 7"
     type="pkg"
