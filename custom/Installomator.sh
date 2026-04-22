@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2026-01-22"
+VERSIONDATE="2026-04-22"
 
 # MARK: Functions
 
@@ -1600,6 +1600,14 @@ autoreload)
     downloadURL="$(downloadURLFromGit garrettrayj auto-reload)"
     appNewVersion="$(versionFromGit garrettrayj auto-reload)"
     expectedTeamID="N7TC759VWV"
+    ;;
+bootstrapbuddy)
+    name="BootstrapBuddy"
+    type="pkg"
+    packageID="com.inetum.Bootstrap-Buddy"
+    downloadURL="$(downloadURLFromGit Inetum-Poland bootstrap-buddy)"
+    appNewVersion="$(versionFromGit Inetum-Poland bootstrap-buddy)"
+    expectedTeamID="C8GR948K5Q"
     ;;
 chmodbpf)
     name="ChmodPBF"
