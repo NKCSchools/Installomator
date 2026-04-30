@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2026-04-22"
+VERSIONDATE="2026-04-30"
 
 # MARK: Functions
 
@@ -1695,6 +1695,14 @@ jamfconnectold)
     downloadURL="https://files.jamfconnect.com/JamfConnect-2.43.0.dmg"
     appNewVersion=$(curl -fsIL "${downloadURL}" | grep "x-amz-meta-version" | grep -o "[0-9.].*[0-9.].*[0-9]")
     expectedTeamID="483DWKW443"
+    ;;
+# Jamf Helper Constructor
+jhc)
+    name="jhc"
+    type="zip"
+    downloadURL="$(downloadURLFromGit BIG-RAT jhc)"
+    appNewVersion="$(versionFromGit BIG-RAT jhc)"
+    expectedTeamID="PS2F6S478M"
     ;;
 javajdk)
 	# NKC Change
