@@ -349,7 +349,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.9beta"
-VERSIONDATE="2026-04-30"
+VERSIONDATE="2026-05-21"
 
 # MARK: Functions
 
@@ -1712,16 +1712,16 @@ javajdk)
     downloadURL="https://download.oracle.com/java/21/latest/jdk-21_macos-aarch64_bin.dmg"
     expectedTeamID="VB5E2TV963"
     ;;
-    kitestudentportal)
+     kitestudentportal)
     # NKC Change
     # Download link found at https://ksassessments.org/node/147
     name="Kite Student Portal"
-    type="pkg"
-    downloadURL="https://files.kiteaai.org/installers/studentportal/prod/latest/mac/Kite%20Student%20Portal.pkg"
+    type="pkgInDmg"
+    downloadURL="https://files.kiteaai.org/installers/pltwstudentportal/prod/latest/mac/PLTW%20Kite%20Student%20Portal.dmg"
+    # downloadURL="https://files.kiteaai.org/installers/studentportal/prod/latest/mac/Kite%20Student%20Portal.pkg"
     appNewVersion=""
     expectedTeamID="BK4732M7XX"
-    ;;
-locklizard)
+    ;;locklizard)
 	# NKC Change
     name="locklizard"
     type="pkgInZip"
