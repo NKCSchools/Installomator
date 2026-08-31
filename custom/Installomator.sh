@@ -1757,6 +1757,14 @@ minecraftedu)
     expectedTeamID="UBF8T346G9"
     appName="minecraft-edu.app"
     ;;
+pearsonlockdownbrowser)
+    name="PearsonLockDownBrowserPackage-Mac"
+    type="pkgInZip"
+    packageID="com.Respondus.LockDownBrowserOEM.pkg"
+    downloadURL="https://www.mathxl.com/support/mxlplayer/PearsonLockDownBrowserPackage-Mac.zip"
+    appNewVersion=""
+    expectedTeamID="8CA6NAN723"
+    ;;
 pltwkitestudentportal)
     # NKC Change
     name="PLTW Kite Student Portal"
