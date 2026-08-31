@@ -352,7 +352,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.10beta"
-VERSIONDATE="2026-07-23"
+VERSIONDATE="2026-08-31"
 
 # MARK: Functions
 
