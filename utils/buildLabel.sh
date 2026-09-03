@@ -8,7 +8,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # go from the source code
 
-downloadURL="https://www.mathxl.com/support/mxlplayer/PearsonLockDownBrowserPackage-Mac.zip"
+downloadURL="https://downloads.ndi.tv/Tools/NDIToolsInstaller.pkg"
 
 # Note: this tool _very_ experimental and does not work in many cases
 # That being said, it's a great place to start for building up the label in the Case-statement

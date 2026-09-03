@@ -352,7 +352,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.10beta"
-VERSIONDATE="2026-08-31"
+VERSIONDATE="2026-09-03"
 
 # MARK: Functions
 
@@ -1757,7 +1757,34 @@ minecraftedu)
     expectedTeamID="UBF8T346G9"
     appName="minecraft-edu.app"
     ;;
-pearsonlockdownbrowser)
+nditoolsnkc)
+    name="NDIToolsInstaller"
+    type="pkg"
+    packageID="com.newtek.Application-Mac-NDI-ScanConverter
+com.newtek.Application-Mac-NDI-AccessManager
+com.newtek.Application-Mac-NDI-VirtualInput
+com.newtek.driver.NDIAudio
+com.newtek.Application-Mac-NDI-StudioMonitor
+0
+com.newtek.ndi.recording
+com.newtek.Test-Patterns-Mac-
+com.newtek.NDIRouter
+com.newtek.ndidiscovery
+0
+com.newtek.NewTek-Import-SpeedHQ
+com.newtek.NDI-Transmit-AdobeCC
+com.newtek.DAL.NDIplugin
+0
+com.newtek.DAL.NDIpluginlaunchdaemon
+0
+com.newtek.HAL.NDIaudioplugin
+com.newtek.NDI.prefpane
+com.newtek.NDI-HX-Driver
+com.newtek.NDI-Tools"
+    downloadURL="https://downloads.ndi.tv/Tools/NDIToolsInstaller.pkg"
+    appNewVersion=""
+    expectedTeamID="W8U66ET244"
+    ;;pearsonlockdownbrowser)
     name="PearsonLockDownBrowserPackage-Mac"
     type="pkgInZip"
     packageID="com.Respondus.LockDownBrowserOEM.pkg"
