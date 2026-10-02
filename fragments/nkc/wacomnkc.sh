@@ -1,0 +1,27 @@
+wacomnkc)
+    name="WacomTablet_6.4.14-2"
+    type="pkgInDmg"
+    packageID="com.wacom.TabletInstaller
+com.wacom.WacomCenter
+com.wacom.Wacom-Desktop-Center
+com.wacom.WacomExperienceProgram
+com.wacom.Wacom-Display-Settings
+com.wacom.RemoveWacomTablet
+com.apple.systempreferences
+com.wacom.TabletDriver
+com.wacom.UpgradeHelper
+com.wacom.WacomCenterPrefPane
+com.wacom.FirmwareUpdater
+com.wacom.ProfessionalControlPanel
+com.wacom.MultiTouch
+com.wacom.RemoveWacomTablet
+com.wacom.WacomExperienceProgram
+com.wacom.Wacom-Display-Settings
+com.wacom.WacomCenter
+com.wacom.WacomADCV
+com.wacom.WacomTouchDriver
+com.wacom.wacomtablet"
+    downloadURL="https://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_6.4.14-2.dmg"
+    appNewVersion=""
+    expectedTeamID="EG27766DY7"
+    ;;

@@ -353,7 +353,7 @@ if [[ $(/usr/bin/arch) == "arm64" ]]; then
     fi
 fi
 VERSION="10.10beta"
-VERSIONDATE="2026-09-04"
+VERSIONDATE="2026-10-02"
 
 # MARK: Functions
 
@@ -1916,7 +1916,33 @@ verniergraphicalanalysis)
     expectedTeamID="75WN2B2WR8"
     appName="Vernier Graphical Analysis.app"
     ;;
-wifiexplorerpro3)
+wacomnkc)
+    name="WacomTablet_6.4.14-2"
+    type="pkgInDmg"
+    packageID="com.wacom.TabletInstaller
+com.wacom.WacomCenter
+com.wacom.Wacom-Desktop-Center
+com.wacom.WacomExperienceProgram
+com.wacom.Wacom-Display-Settings
+com.wacom.RemoveWacomTablet
+com.apple.systempreferences
+com.wacom.TabletDriver
+com.wacom.UpgradeHelper
+com.wacom.WacomCenterPrefPane
+com.wacom.FirmwareUpdater
+com.wacom.ProfessionalControlPanel
+com.wacom.MultiTouch
+com.wacom.RemoveWacomTablet
+com.wacom.WacomExperienceProgram
+com.wacom.Wacom-Display-Settings
+com.wacom.WacomCenter
+com.wacom.WacomADCV
+com.wacom.WacomTouchDriver
+com.wacom.wacomtablet"
+    downloadURL="https://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_6.4.14-2.dmg"
+    appNewVersion=""
+    expectedTeamID="EG27766DY7"
+    ;;wifiexplorerpro3)
     # NKC Change
     name="WiFiExplorerPro3"
     type="pkg"
