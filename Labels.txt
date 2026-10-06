@@ -51,6 +51,7 @@ amazoncorretto23jdk
 amazoncorretto25jdk
 amazoncorretto8jdk
 amazonq
+amazonquick
 amazonworkspaces
 anaconda
 anastasiysextensionmanager
@@ -94,6 +95,8 @@ atext
 atextlegacy
 atlassiancompanion
 audacity
+audacity3
+audacity4
 audiopen
 autodeskfusion360admininstall
 autodmg
@@ -120,6 +123,7 @@ bbeditpkg
 beamstudio
 beekeeperstudio
 betterdisplay
+bettershot
 bettertouchtool
 betterzip
 beyondcomparepro
@@ -132,6 +136,10 @@ bitwigstudio
 blackhole16ch
 blackhole2ch
 blackhole64ch
+blackmagicatemswitchers
+blackmagiccameras
+blackmagicconverters
+blackmagicultimatte
 blender
 blitzit
 boop
@@ -168,6 +176,7 @@ camtasia2025
 camtasia2026
 camunda
 canva
+capcut
 carboncopycloner
 cardpresso
 catoclient
@@ -232,6 +241,7 @@ clipgrab
 clipy
 closeio
 cloudflarewarp
+cloudtalk
 cloudya
 clue
 cluefull
@@ -270,6 +280,7 @@ daruma
 daylite
 dbeaverce
 dbeaverteam
+dbgate
 dbvisualizer
 debookee
 dedoose
@@ -429,6 +440,9 @@ githubcopilotforxcode
 githubdesktop
 gitkraken
 glean
+globalprotect62
+globalprotect63
+globalprotect64
 globusconnectpersonal
 glpiagent
 glyphs3
@@ -469,7 +483,6 @@ gyazogif
 hancock
 handbrake
 handy
-harmonysase
 harper
 hazel
 headlamp
@@ -506,6 +519,13 @@ imageoptim
 imazing3
 imazingprofileeditor
 inetclearreportsdesigner
+infinitealgebra1
+infinitealgebra2
+infinitecalculus
+infinitegeometry
+infinitegrade6math
+infiniteprealgebra
+infiniteprecalculus
 inkscape
 inmusicsoftwarecenter
 insomnia
@@ -541,6 +561,7 @@ jamfpssoutility
 jamfreenroller
 jamfsetupchecklist
 jamfsetupmanager
+jamie
 jamovi
 jasp
 jcpswdmgr
@@ -753,6 +774,7 @@ monotypeconnect
 montereyblocker
 morisawadesktopmanager
 motion
+motivmix
 mountainduck
 mowgliiitsycal
 multipass
@@ -837,6 +859,7 @@ outputarcade
 outputhub
 outset
 overflow
+overlord
 owncloud
 pacifist
 packages
@@ -851,7 +874,6 @@ patchomator
 pcoipclient
 pdfexpert
 pdfsam
-perimeter81
 pgadmin4
 phoenixcode
 pika
@@ -890,6 +912,7 @@ promiseutilityr
 proofpointautoupdater
 propresenter7
 protondrive
+protonpass
 protonvpn
 proxyman
 prune
@@ -991,7 +1014,6 @@ sketchup2024
 sketchup2025
 sketchup2026
 skim
-skype
 slab
 slack
 slido
@@ -1065,6 +1087,7 @@ synergybaseball
 synergybasketball
 synergyvideoexpress
 synologyactivebackupforbusinessagent
+synologyactiveprotectagent
 synologyassistant
 synologydriveclient
 sysexlibrarian
@@ -1149,6 +1172,7 @@ ultracompare
 ultraedit
 umbrellaroamingclient
 uniconverter
+unifiendpoint
 unityhub
 universaltypeclient
 unnaturalscrollwheels
@@ -1252,6 +1276,7 @@ zoomoutlookplugin
 zoomoutlookpluginremoval
 zoompresence
 zoomrooms
+zoomvdiplugin
 zotero
 zulip
 zulujdk11
