@@ -8,7 +8,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # go from the source code
 
-downloadURL="https://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_6.4.14-2.dmg"
+downloadURL="https://files.kiteaai.org/installers/studentportal/prod/latest/mac/Kite%20Student%20Portal.dmg"
 
 # Note: this tool _very_ experimental and does not work in many cases
 # That being said, it's a great place to start for building up the label in the Case-statement
