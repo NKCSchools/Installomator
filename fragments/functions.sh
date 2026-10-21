@@ -238,7 +238,7 @@ getAppVersion() {
 
     # pkgs contains a version number, then we don't have to search for an app
     if [[ $packageID != "" ]]; then
-        appversion="$(pkgutil --pkg-info-plist ${packageID} 2>/dev/null | grep -A 1 pkg-version | tail -1 | sed -E 's/.*>([0-9.]*)<.*/\1/g')"
+        appversion="$(pkgutil --pkg-info-plist "${packageID}" 2>/dev/null | plutil -extract pkg-version raw -o - -)"
         if [[ $appversion != "" ]]; then
             printlog "found packageID $packageID installed, version $appversion"
             updateDetected="YES"
@@ -1056,7 +1056,12 @@ updateDialog() {
             echo "progress: $progress" >> $cmd_file
         fi
         if [[ $message != "" ]]; then
-            echo "progresstext: $message" >> $cmd_file
+            if [[ $appNewVersion != "" ]]; then
+                appVersionProgressText=${appNewVersion// /}
+                echo "progresstext: v$appVersionProgressText $message" >> $cmd_file
+            else
+                echo "progresstext: $message" >> $cmd_file
+            fi
         fi
     else
         # list item has a value, so we update the progress and text in the list
@@ -1067,4 +1072,3 @@ updateDialog() {
         fi
     fi
 }
-
